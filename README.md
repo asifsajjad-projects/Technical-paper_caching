@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-The project was going through some performance and scaling issues. There might be many reasons for it and after analysis by the team lead, it was suggested to use **better caching approaches**. This report is created to investigate different caching approaches. Various caching methods and their importance are recorded in this report to help the team deploy them efficiently. The performance and scalability of the app are expected to increase significantly after deployment of these techniques. Apart from that, the data cost is also expected to reduce for the end-user. 
+The project was going through some performance and scaling issues. There might be many reasons for it and after analysis by the team lead, it was suggested to use **better caching approaches**. This report is created to investigate different caching approaches. Various caching methods and their importance are recorded in this report to help the team deploy them efficiently. The performance and scalability of the app are expected to increase significantly after the deployment of these techniques. Apart from that, the data cost is also expected to reduce for the end-user. 
 
 ## - Index
 
@@ -32,7 +32,7 @@ The project was going through some performance and scaling issues. There might b
 
 ## 1. Introduction
 
-Caching is a process of storing copies of files locally in a cache or temporary files at a location where the fetching of these data generally becomes faster than fetching from the original source. As per Wikipedia "`In computing, a cache is a hardware or software component that stores data so that future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation or a copy of data stored elsewhere. A cache hit occurs when the requested data can be found in a cache, while a cache miss occurs when it cannot`". Caching is used in many aspects of computer technology viz. processor cache, cache in RAM, cache for programs, web cache, etc. Here in this report, we are going to discuss cache in web technology. Web browsers in our devices cache HTML files, images, JavaScript, and fonts to load pages more quickly.
+Caching is a process of storing copies of files locally in a cache or temporary files at a location where the fetching of these data generally becomes faster than fetching from the original source. As per Wikipedia "`In computing, a cache is a hardware or software component that stores data so that future requests for that data can be served faster; the data stored in a cache might be the result of an earlier computation or a copy of data stored elsewhere. A cache hit occurs when the requested data can be found in a cache, while a cache miss occurs when it cannot`". Caching is used in many aspects of computer technology viz. processor cache, cache in RAM, a cache for programs, web cache, etc. Here in this report, we are going to discuss cache in web technology. Web browsers in our devices cache HTML files, images, JavaScript, and fonts to load pages more quickly.
 
 Examples of hardware caches are:
 
@@ -78,7 +78,7 @@ The following image sourced from MDN docs helps to illustrate the above ways in 
 
 As a developer, caching can be controlled by introducing certain tags in our HTML file which defines how a web browser will perform cache and check for the freshness of content. The contents which are naturally static such as font type, company logo, basic javascript, etc. are assigned very long TTLs and thus they are prevented from server traffic whenever the page reloads. In this way, only certain dynamic data and contents are transferred over the network which results in less bandwidth consumption from both the server and host sides. Since most of the website is already cached at the user's place, the interrupted or failed network request will not significantly reduce user experience on the site.
 
-HTTP cache responses are typically added to `GET` request method and the following status codes are returned by the server:
+HTTP cache responses are typically added to the `GET` request method and the following status codes are returned by the server:
 
 - Successful results of a retrieval request: a `200 (OK)` response to a GET request containing a resource like HTML documents, images, or files.
 - Permanent redirects: a `301 (Moved Permanently)` response.
@@ -95,7 +95,7 @@ There are several ways by which we can implement control over the cache. They ar
 
 ### 3.1.1 Cache-Control header
 
-The Cache-Control header is a general header, that specifies the caching policies of server responses as well as client requests. It gives information about the how a particular resource is cached, the location of the cached resource, and its maximum age attained before getting expired i.e. time to live.
+The Cache-Control header is a general header, that specifies the caching policies of server responses as well as client requests. It gives information about how a particular resource is cached, the location of the cached resource, and its maximum age attained before getting expired i.e. time to live.
 
 The syntax for Cache-Control header is as follows:
 
@@ -127,7 +127,7 @@ The following are directives explained in brief (*sourced from geeks for geeks*)
 
 12. **proxy-revalidate**: This directive is similar to must-revalidate. However, it only works for shared caches and is ignored by the private caches.
 
-13. **Immutable**: It indicates that the response body remains unchanged over the time.
+13. **Immutable**: It indicates that the response body remains unchanged over time.
 
 14. **no-transform**: It indicates that the resources cannot be transformed or modified into another form.
 
