@@ -1,25 +1,25 @@
 
+# Technical report 
 
-# <p style="text-align:center"> Technical report </p>
 
+### Topic: Caching 
+ By: Asif Sajjad 
 
-### <p style="text-align:left"> Topic: Caching </p> <p style="text-align:right"> By: Asif Sajjad </p>
+## * Executive summary
 
-##* Executive summary
+The project was going through some performance and scaling issues. There might be many reasons for it and after analysis by the team lead, it was suggested to use == better caching approaches ==. This report is created in order to investigate different caching approaches. Various caching methods and their importance are recorded in this report to help the team deploy them efficiently. The performance and scalability of the app is expected to increase significantly after deployment of these techniques. Apart from that, the data cost is also expected to reduce for the end user. 
 
-The project was going through some performance and scaling issues. There might be many reasons for it and after analysis by the team lead, it was suggested to use ==better caching approaches==. This report is created in order to investigate different caching approaches. Various caching methods and their importance are recorded in this report to help the team deploy them efficiently. The performance and scalability of the app is expected to increase significantly after deployment of these techniques. Apart from that, the data cost is also expected to reduce for the end user. 
-
-##* Index
+## * Index
 
 ### Table of contents
 
 | Sl.No. | Title |
 |------- | ----- |
-| 1 | ==Introduction== |
+| 1 | == Introduction == |
 | 1.1 | CDN Server cache |
 | 1.2 | DNS Server cache |
 | 1.3 | Web browser cache |
-| 2 | ==HTTP caching== |
+| 2 | == HTTP caching == |
 | 3 | ==Methodology== |
 | 3.1 | Cache controlling |
 | 3.1.1 | Cache-Control header |
