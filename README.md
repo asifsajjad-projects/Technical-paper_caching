@@ -165,12 +165,12 @@ After studying various caching approaches and ways of implementation, a certain 
 
 1. Build a site which is more cache aware. Listed below are some of the methods which can help to achieve this.
 
-> **Use URLs consistently** : When updating contents avoid changing their URLs to make the site more cache friendly.
-> **Use a common library/directory for images**
-> **Make caches store images and pages that don’t change often by using a `Cache-Control: max-age` header with a large value.**
-> **If a resource (especially a downloadable file) changes, change its name.** This will ensure that browser will load them again irrespective of their long cache age.
-> **Use cookies only where necessary as cookies are difficult to cache**
-> **Don’t change files unnecessarily. If you do, everything will have a falsely young `Last-Modified date`.** When updating your site, don’t copy over the entire site. Just move the files that you’ve changed.
+> 1. **Use URLs consistently** : When updating contents avoid changing their URLs to make the site more cache friendly.
+> 2. **Use a common library/directory for images**
+> 3. **Make caches store images and pages that don’t change often by using a `Cache-Control: max-age` header with a large value.**
+> 4. **If a resource (especially a downloadable file) changes, change its name.** This will ensure that browser will load them again irrespective of their long cache age.
+> 5. **Use cookies only where necessary as cookies are difficult to cache**
+> 6. **Don’t change files unnecessarily. If you do, everything will have a falsely young `Last-Modified date`.** When updating your site, don’t copy over the entire site. Just move the files that you’ve changed.
 
 2. Write cache friendly scripts. The best way to make a script cache-friendly is to dump its content to a plain file whenever it changes.
 
@@ -189,5 +189,5 @@ During a new project, many performance improvements and scalability issues can b
 1. **MDN Docs:** https://developer.mozilla.org/en-US/docs/Web/HTTP/Caching
 2. **keyCDN:** https://www.keycdn.com/blog/http-cache-headers
 3. **Cloudflare:** https://www.cloudflare.com/learning/cdn/what-is-caching/
-4. ** Wikipedia:** https://en.wikipedia.org/wiki/Cache_(computing)
+4. **Wikipedia:** https://en.wikipedia.org/wiki/Cache_(computing)
 5. **Geeks for Geeks:** https://www.geeksforgeeks.org/http-headers-cache-control/
